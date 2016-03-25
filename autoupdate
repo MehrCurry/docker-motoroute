@@ -1,0 +1,6 @@
+#!/bin/bash
+
+fullname=$1
+filename="${fullname%.osm.pbf}-$(date +%Y-%m-%d).osm.pbf"
+osmupdate -v $1 $filename
+mrtk $filename
